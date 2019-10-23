@@ -4,8 +4,8 @@
 
 body {
     padding-top: 3rem;
-    padding-bottom: 3rem;
-    color: #5a5a5a;
+    padding-bottom: 3rem; 
+    color: #000000;
   }
   
   
@@ -103,3 +103,8 @@ body {
       font-size: 3.5rem;
     }
   }
+
+  .text-white {
+    color: black!important;
+}
+
