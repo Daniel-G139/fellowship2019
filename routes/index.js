@@ -9,6 +9,10 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.get('/cad', function(req, res, next) {
+  res.render('cad');
+});
+
 router.get('/logout', function(req,res,next){
   req.logout();
   req.flash('info', 'You have been logged out.');
