@@ -10,11 +10,25 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/cad', function(req, res, next) {
-  res.render('cad');
+  console.log(req.query);
+  res.render('cad' , {
+    name: req.query.name,
+    lastname: req.query.lastname,
+
+  });
 });
 
 router.get('/blog', function(req, res, next) {
   res.render('blog');
+});
+
+router.post('/blog2', function(req, res, next) {
+  console.log(req.query);
+  res.render('blog' , {
+    name: req.body.name,
+    lastname: req.body.lastname,
+
+  });
 });
 
 router.get('/logout', function(req,res,next){
