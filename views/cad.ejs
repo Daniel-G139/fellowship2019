@@ -169,5 +169,36 @@
   </form>
 
   
+<button id="ajax-dan">Click Me!!!!</button>
+
+<script>
+
+function displayResult(value) {
+  document.getElementById("ajax-dan").innerHTML = value;
+}
+
+  $("#ajax-dan").click(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "GET",
+      url: "https://sv443.net/jokeapi/category/programming",
+      data: {},
+      success: function(result) {
+        if (result.joke) {
+          displayResult(result.joke)
+        }
+      },
+      error: function(result) {
+        if (result.joke) {
+          displayResult(result.joke)
+        }
+      },
+      error: function(result) {
+        alert("this did not work")
+      }
+  });
+  })
+
+</script>
   </main>
   
