@@ -4,6 +4,13 @@ const express = require('express');
 const router = express.Router();
 const models = require('../models');
 
+router.get('/', function(req, res, next) {
+  models.Post.findAll().then(function(records) {
+    res.render('index', {
+      records: records
+    });
+  });
+});
 
 router.get('/', function(req, res, next) {
   res.render('index');
