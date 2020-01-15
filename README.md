@@ -2,6 +2,8 @@
 
 This repository contains a "starter" project for web application development in JavaScript.
 
+Hello world this is a change I made.
+git 
 ## Getting Started
 
 1. Clone this git repo to a "local" directory (on your computer), then change
