@@ -12,6 +12,15 @@ router.get('/', function(req, res, next) {
   });
 });
 
+
+router.get('/posts', function(req, res, next){
+  models.Post.findByPk(req.query.id).then(function(record){
+    res.render('posts', {
+      record: record
+    });
+  });
+});
+
 router.get('/', function(req, res, next) {
   res.render('index');
 });

@@ -198,7 +198,7 @@
 
   <ul>
     <% for (let record of records) { %>
-      <li><%= record.title %></li>
+      <li><a href="/posts?id=<%= record.id %>"><%= record.id%><%= record.title %></a></li>
       <% } %>
   </ul>
 
